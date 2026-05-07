@@ -1,0 +1,191 @@
+:root {
+  color: #172033;
+  background: #f4f7fb;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.shell {
+  width: min(1120px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 36px 0;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+.lede {
+  max-width: 680px;
+  margin: 12px 0 0;
+  color: #60708b;
+  font-size: 1.1rem;
+}
+
+.status {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: #e7eef9;
+  color: #2e3d55;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.status-live {
+  background: #dff7ec;
+  color: #047857;
+}
+
+.status-reconnecting,
+.status-connection-issue,
+.status-api-unavailable,
+.status-send-failed {
+  background: #fff3d6;
+  color: #9a5b00;
+}
+
+.chat {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 20px;
+}
+
+.messages,
+.composer {
+  border: 1px solid #d7e0ee;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 14px 40px rgb(23 32 51 / 0.07);
+}
+
+.messages {
+  min-height: 520px;
+  max-height: 68vh;
+  overflow: auto;
+  padding: 18px;
+}
+
+.empty {
+  margin: 0;
+  color: #60708b;
+}
+
+.message {
+  border-bottom: 1px solid #edf1f7;
+  padding: 14px 0;
+}
+
+.message:first-child {
+  padding-top: 0;
+}
+
+.message:last-child {
+  border-bottom: 0;
+}
+
+.message header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.message time {
+  color: #7b88a0;
+  font-size: 0.86rem;
+}
+
+.message p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.composer {
+  align-self: start;
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  color: #42516a;
+  font-weight: 800;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cdd7e6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #172033;
+  background: #fbfdff;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: white;
+  background: #0f766e;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0b5f59;
+}
+
+@media (max-width: 760px) {
+  .hero,
+  .chat {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    display: grid;
+  }
+}
+
