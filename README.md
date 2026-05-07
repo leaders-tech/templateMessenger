@@ -45,6 +45,11 @@ redis:6379
 nats:4222
 ```
 
+Postgres uses `PGDATA=/var/lib/postgresql/data/pgdata`. Keep that nested
+directory: tlfpaas rewrites named volumes into host bind directories, and
+non-root Postgres can initialize and chmod its own nested `pgdata` directory
+reliably.
+
 ## Required tlfpaas Secrets
 
 Add these in the tlfpaas Secrets UI before the first deploy:
